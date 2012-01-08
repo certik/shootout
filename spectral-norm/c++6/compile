@@ -1,0 +1,6 @@
+#! /bin/bash
+
+set -e
+CPPFLAGS="-pipe -O3 -march=native -fopenmp -mfpmath=sse -msse2"
+gfortran $CPPFLAGS -o spectral_norm.o -c spectral_norm.cpp
+gfortran $CPPFLAGS -o spectral_norm spectral_norm.o
