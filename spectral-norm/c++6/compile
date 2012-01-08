@@ -1,7 +1,4 @@
 #! /bin/bash
 
 set -e
-CPPFLAGS="-pipe -O3 -march=native -fopenmp -mfpmath=sse -msse2"
-#CPPFLAGS="-Wall -Wextra -fPIC -fmax-errors=1 -O3 -march=native -ffast-math -funroll-loops"
-g++ $CPPFLAGS -o spectral_norm.o -c spectral_norm.cpp
-g++ $CPPFLAGS -o spectral_norm spectral_norm.o
+icpc-12.1.256 -O3 -xHost -openmp -o spectral_norm spectral_norm.cpp
