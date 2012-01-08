@@ -1,7 +1,4 @@
 #! /bin/bash
 
 set -e
-FFLAGS="-Wall -Wextra -Wimplicit-interface -fPIC -Werror -fmax-errors=1 -O3 -march=native -ffast-math -funroll-loops"
-#FFLAGS="-Wall -Wextra -Wimplicit-interface -fPIC -Werror -fmax-errors=1 -O3 -march=native -ffast-math -funroll-loops -pipe -fopenmp -mfpmath=sse -msse2"
-gfortran $FFLAGS -o spectral_norm.o -c spectral_norm.f90
-gfortran $FFLAGS -o spectral_norm spectral_norm.o
+ifort-12.1.256 -O3 -xHost -o spectral_norm spectral_norm.f90
