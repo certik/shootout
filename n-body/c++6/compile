@@ -1,0 +1,7 @@
+#! /bin/bash
+
+set -e
+CPPFLAGS="-pipe -O3 -fomit-frame-pointer -march=native -lm -mfpmath=sse -msse3 --std=c++0x -mfpmath=sse -msse3"
+#CPPFLAGS="-Wall -Wextra -fPIC -fmax-errors=1 -O3 -march=native -ffast-math -funroll-loops"
+gfortran $CPPFLAGS -o n_body.o -c n_body.cpp
+gfortran $CPPFLAGS -o n_body n_body.o
