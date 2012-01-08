@@ -3,5 +3,5 @@
 set -e
 CPPFLAGS="-pipe -O3 -march=native -fopenmp -mfpmath=sse -msse2"
 #CPPFLAGS="-Wall -Wextra -fPIC -fmax-errors=1 -O3 -march=native -ffast-math -funroll-loops"
-gfortran $CPPFLAGS -o spectral_norm.o -c spectral_norm.cpp
-gfortran $CPPFLAGS -o spectral_norm spectral_norm.o
+g++ $CPPFLAGS -o spectral_norm.o -c spectral_norm.cpp
+g++ $CPPFLAGS -o spectral_norm spectral_norm.o
