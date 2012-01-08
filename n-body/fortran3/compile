@@ -1,0 +1,7 @@
+#! /bin/bash
+
+set -e
+FFLAGS="-Wall -Wextra -Wimplicit-interface -fPIC -Werror -fmax-errors=1 -O3 -march=native -ffast-math -funroll-loops"
+#FFLAGS="-Wall -Wextra -Wimplicit-interface -fPIC -Werror -fmax-errors=1 -O3 -march=native -ffast-math -funroll-loops -pipe -fopenmp -mfpmath=sse -msse2"
+gfortran $FFLAGS -o n_body.o -c n_body.f90
+gfortran $FFLAGS -o n_body n_body.o
