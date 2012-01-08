@@ -1,0 +1,4 @@
+#! /bin/bash
+
+set -e
+icpc-12.1.256 -O3 -xHost -openmp -std=c++0x -o spectral_norm spectral_norm.cpp
