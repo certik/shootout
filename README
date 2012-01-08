@@ -1,12 +1,12 @@
 n-body
 ======
 
-My timings with ifort and icpc:
+My timings with ifort and icpc 12.1.256:
 
 fortran3: 0m9.139s
 c++6: 0m10.970s
 
-My timings with gfortran and g++ (different computer than above):
+My timings with gfortran and g++ 4.6.1 (different computer than above):
 
 fortran3: 0m20.482s
 c++6: 0m13.306s
@@ -14,13 +14,13 @@ c++6: 0m13.306s
 spectral-norm
 =============
 
-My timings with ifort and icpc:
+My timings with ifort and icpc 12.1.256:
 
 fortran2: 0m4.764s
 c++1: 0m9.526s
 c++6: doesn't compile
 
-My timings with gfortran and g++ (different computer than above):
+My timings with gfortran and g++ 4.6.1 (different computer than above):
 
 fortran2: 0m12.416s
 c++1: 0m15.067s
