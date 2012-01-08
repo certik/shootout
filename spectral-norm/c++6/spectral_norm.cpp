@@ -81,7 +81,7 @@ int GetThreadCount() {
         if (CPU_ISSET(i, &cs))
             ++count;
 
-    return count;
+    return 1;
 }
 
 double spectral_game(int N) {
